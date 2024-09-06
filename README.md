@@ -34,3 +34,7 @@ wget https://raw.githubusercontent.com/Savalone/Suricata-setup/main/Set-IPS-mode
 chmod +x Set-IPS-mode.sh
 sudo ./Set-IPS-mode.sh
 ```
+
+# Referencias
+https://docs.suricata.io/en/latest/
+https://www.digitalocean.com/community/tutorials/how-to-configure-suricata-as-an-intrusion-prevention-system-ips-on-ubuntu-20-04
