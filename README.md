@@ -1,22 +1,36 @@
-# Suricata-setup
+# Suricata-Setup
 
-Suricata-Setup.sh facilitara la configuracion inicial de suricata luego de su instalacion, detectando y cambiando automaticamante los campos necesarios para la configuracion basica de suricata, y siguiendo los pasos para poder empezar a utilizar suricata como IDS en pocos segundos.
+`Suricata-Setup.sh` facilita la configuración inicial de Suricata después de su instalación, detectando y ajustando automáticamente los parámetros necesarios para su configuración básica. Este script permite comenzar a usar Suricata como un Sistema de Detección de Intrusos (IDS) en pocos segundos.
+> Recomendación: Realice un snapshot o guarde el estado de su máquina antes de ejecutar el script.
 
-> Se recomienda hacer un snapshot o guardar el estado de la maquina antes de la ejecucion de el script
+## Uso
 
+Para ejecutar el script directamente desde el repositorio:
+```bash
+curl -sSL https://raw.githubusercontent.com/Savalone/Suricata-setup/main/Suricata-Setup.sh | sudo bash
+```
+
+## Alternativamente
+```bash
+wget https://raw.githubusercontent.com/Savalone/Suricata-setup/main/Suricata-Setup.sh
+chmod +x Suricata-Setup.sh
+sudo ./Suricata-Setup.sh
+```
 ---
+# Set-IPS-mode
 
-# Set-IPS-mode.sh
+`Set-IPS-mode.sh`  configura automáticamente Suricata para operar en modo de Sistema de Prevención de Intrusos (IPS). Modifica los parámetros necesarios y agrega las reglas de firewall correspondientes para que Suricata pueda funcionar correctamente en este modo.
+> Nota: Este script utiliza iptables y iptables-persistent. Si utiliza ufw u otro firewall, es recomendable seguir [esta guia](https://www.digitalocean.com/community/tutorials/how-to-configure-suricata-as-an-intrusion-prevention-system-ips-on-ubuntu-20-04) para una configuración adecuada.
 
-Set-IPS-mode.sh configura automaticamente suricata para actuar en modo IPS, modificando los campos necesarios, y agregando las reglas de firewall pertinentes para que suricata realice su trabajo.
+## Uso
+Para ejecutar el script directamente desde el repositorio:
+```bash
+curl -sSL https://raw.githubusercontent.com/Savalone/Suricata-setup/main/Set-IPS-mode.sh | sudo bash 
+```
 
-> Es importante resaltar que este script utiliza iptables e iptables-persistent, por lo que si en su configuracion esta usando ufw u otro firewall, se recomienda seguir esta guia para la configuracion:
-> https://www.digitalocean.com/community/tutorials/how-to-configure-suricata-as-an-intrusion-prevention-system-ips-on-ubuntu-20-04
-
----
-## Referencias
-
-https://www.digitalocean.com/community/tutorials/how-to-configure-suricata-as-an-intrusion-prevention-system-ips-on-ubuntu-20-04
-https://docs.suricata.io/en/latest
-
-
+## Alternativamente
+```bash
+wget https://raw.githubusercontent.com/Savalone/Suricata-setup/main/Set-IPS-mode.sh
+chmod +x Set-IPS-mode.sh
+sudo ./Set-IPS-mode.sh
+```
